@@ -7,6 +7,7 @@ app.engine('.hbs', exphbs({
   defaultLayout: 'main'
 }))
 app.set('view engine', '.hbs')
+app.use(express.static('public'))
 
 require('./controllers/caasControllers')(app)
 
